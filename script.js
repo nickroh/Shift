@@ -12,7 +12,13 @@ function matching(user){
     var per = myNum / bodyNum * 100;
     per = per.toFixed(1);
     // id값이 result인 태그에 결과를 추가한다. 
-    document.querySelector('#result').innerText = myNum + '/' + bodyNum + '(' + (per) + '%)';
+    // document.querySelector('#result').innerText = myNum + '/' + bodyNum + '(' + (per) + '%)';
+    if(user == undefined){
+      document.getElementById('result').innerHTML = '...'; 
+    }else{
+      document.getElementById('result').innerHTML = myNum + '/' + bodyNum + '(' + (per) + '%)'; 
+    }
+    
   });
 }
  
